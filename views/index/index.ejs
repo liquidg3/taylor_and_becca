@@ -1,6 +1,13 @@
 <div class="hero">
     <div ng-hide="!muted" class="cover"></div>
-    <video id="hero-video" src="/public/videos/hero.mov" autoplay muted loop></video>
+    <video id="hero-video" autoplay muted loop>
+
+        <source src="/public/videos/hero.m4v" type="video/mp4" />
+        <source src="/public/videos/hero.webm" type="video/webm" />
+        <source src="/public/videos/hero.ogv" type="video/ogg" />
+        <source src="/public/videos/hero.mp4" />
+
+    </video>
     <div ng-hide="!muted" id="crest" class="crest wow bounceIn" ></div>
     <a ng-hide="!muted"  href="" ng-class="{ muted : muted }" class="play" ng-click="toggleAudio()"></a>
     <div class="scroll-down"><img src="/public/images/scroll-down.svg" /></div>
@@ -41,7 +48,7 @@
                 </div>
 
                 <div class="col-xs-4">
-                    <a href="/public/docs/roadtrip.png">
+                    <a href="" data-toggle="modal" data-target="#car-modal">
                         <img src="/public/images/icons/car.png" />
                     </a>
                 </div>
@@ -87,6 +94,43 @@
 
                 <div class="bs-callout bs-callout-warning">
                     <p>All songs will be considered, but we make no promises!</p>
+                </div>
+
+                <form ng-submit="submitSongSuggestion()">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" name="full-name" ng-model="songSuggestion.name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Suggestions</label>
+                        <textarea class="form-control" name="suggestions" ng-model="songSuggestion.suggestions"></textarea>
+                    </div>
+
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="submitSongSuggestion()">Send</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="car-modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">ROADTRIP</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="bs-callout bs-callout-warning">
+                    <p>The bride and groom are planning to road trip out. If you are interested in caravanning with us, let us know. We'll have additional details as the date approaches.</p>
                 </div>
 
                 <form ng-submit="submitSongSuggestion()">
