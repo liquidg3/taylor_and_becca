@@ -1,0 +1,49 @@
+{
+    "site": {
+        "strategy": "express3",
+        "options": {
+            "port": 80,
+            "vendor": "Romiller",
+            "domain": "taylorromero.com",
+            "media": {
+                "css": [
+                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css",
+                    "/public/css/animate.css"
+                ],
+                "autoCompileLess": false,
+                "less": [
+                    "/public/less/index.less"
+                ],
+                "js": [
+                    "http://code.jquery.com/jquery-1.11.1.min.js",
+                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js",
+                    "/public/js/snap.svg-min.js",
+                    "https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUxzOZJpPeUMkkqQXKuIkZZ5xR3IrdKU&libraries=places",
+                    "/public/js/wow.min.js",
+                    "/public/js/global.js"
+                ]
+            },
+            "routes": {
+                "/": {
+                    "action": "controllers/Index::index",
+                    "layoutContext": {
+                        "title": "Becca & Taylor's Wedding 2015",
+                        "bodyClass": "home"
+                    }
+                },
+                "post /song": {
+                    "action": "controllers/Index::submitSongSuggestion",
+                    "layout": false
+                },
+                "/activities": {
+                    "action": "controllers/Index::noop",
+                    "view": "./views/index/activities.ejs",
+                    "layoutContext": {
+                        "title": "activities",
+                        "bodyClass": "infographic"
+                    }
+                }
+            }
+        }
+    }
+}

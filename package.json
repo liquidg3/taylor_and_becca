@@ -1,0 +1,12 @@
+{
+    "name":         "Romiller",
+    "description":  "This is a placeholder for a description about your app. To configure Altair, use altair.json",
+    "version": "0.0.1",
+    "dependencies": {
+        "nodemailer": "1.3.0"
+    },
+    "altairDependencies": {
+        "titan:Alfred": ">=0.0.x",
+        "liquidfire:AngularJS": ">=0.0.x"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "site": {
+        "options": {
+            "port": 8080,
+            "media": {
+                "autoCompileLess": true,
+                "js":   [
+                    "http://code.jquery.com/jquery-1.11.1.js",
+                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js",
+                    "/public/js/snap.svg.js",
+                    "https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUxzOZJpPeUMkkqQXKuIkZZ5xR3IrdKU&libraries=places",
+                    "/public/js/wow.min.js",
+                    "/public/js/global.js"
+                ]
+            }
+        }
+    }
+}

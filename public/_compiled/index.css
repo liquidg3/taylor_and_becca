@@ -1,0 +1,190 @@
+@import url('../css/fonts.css');
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+@font-face {
+  font-family: retro;
+  src: url('../fonts/vintage.ttf');
+  src: url('../fonts/vintage.eot?#iefix') format('embedded-opentype'), url('../fonts/vintage.woff') format('woff'), url('../fonts/vintage.ttf') format('truetype'), url('../fonts/vintage.svg#svgFontName') format('svg');
+}
+body,
+html {
+  overflow-x: hidden;
+  color: #333333;
+}
+.panavision {
+  font-family: panavision;
+  text-shadow: 2px 2px 0 #000000;
+}
+#audio-controls.muted {
+  background-image: url('../images/sound_off.svg');
+}
+#map {
+  cursor: pointer;
+  position: relative;
+}
+#map iframe {
+  width: 100%;
+  height: 100%;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.hero video {
+  display: block;
+}
+.hero .crest {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  right: 20%;
+  z-index: 5;
+  height: 60%;
+  text-align: center;
+  background-size: contain;
+}
+.hero .crest svg {
+  width: 100%;
+  height: 100%;
+}
+.hero video {
+  width: 100%;
+}
+.hero .cover {
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0.6;
+  -webkit-box-shadow: inset 0 0 100px 100px #000000;
+  box-shadow: inset 0 0 100px 100px #000000;
+}
+.hero .play {
+  position: absolute;
+  width: 100px;
+  bottom: 13%;
+  left: 50%;
+  top: 73%;
+  margin-left: -50px;
+  background: url('../images/play.svg') no-repeat center 96%;
+  display: block;
+  background-size: contain;
+  z-index: 10;
+}
+.hero .panavision {
+  left: 30px;
+  bottom: 10px;
+  position: absolute;
+  text-transform: uppercase;
+  color: #008e74;
+  z-index: 2;
+}
+.hero .panavision small {
+  color: #008e74;
+}
+.hero .small-board-1 {
+  position: absolute;
+  left: 50px;
+  bottom: -50px;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+.hero .small-board-2 {
+  position: absolute;
+  left: 120px;
+  bottom: -50px;
+  background: url('../images/small-board-2.png');
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.hero .scroll-down {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+}
+.hero .scroll-down img {
+  height: 80px;
+}
+.small-board {
+  width: 71px;
+  height: 255px;
+  background-image: url('../images/small-board-1.png');
+}
+.row.photo {
+  display: block;
+  position: relative;
+}
+.row.photo img {
+  width: 100%;
+}
+.row.photo .icons {
+  position: absolute;
+  width: 43%;
+  right: 8%;
+  top: 45%;
+  text-align: center;
+}
+.row.photo .icons .row {
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.row.photo .icons .row div {
+  padding: 0;
+}
+.row.photo .icons img {
+  width: 500px;
+  max-width: 100%;
+}
+body.infographic .container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 750px;
+  padding: 0;
+}
+body.infographic img {
+  max-width: 100%;
+}
+body .btn-primary {
+  background-color: #f05037;
+  border: 1px solid white;
+}
+body .btn-primary:hover {
+  background-color: white;
+  color: #000;
+  border: 1px solid #ccc;
+}
+body.infographic {
+  background-color: #000;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+    background-color: #000;
+  }
+  .hero h3,
+  .hero .panavision,
+  .hero .scroll-down,
+  .hero a.play,
+  .hero video {
+    display: none;
+  }
+  .hero #crest {
+    top: 19%;
+  }
+}

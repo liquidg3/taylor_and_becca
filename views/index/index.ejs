@@ -1,0 +1,172 @@
+<div class="hero">
+    <div ng-hide="!muted" class="cover"></div>
+    <video id="hero-video" src="/public/videos/hero.mov" autoplay muted loop></video>
+    <div ng-hide="!muted" id="crest" class="crest wow bounceIn" ></div>
+    <a ng-hide="!muted"  href="" ng-class="{ muted : muted }" class="play" ng-click="toggleAudio()"></a>
+    <div class="scroll-down"><img src="/public/images/scroll-down.svg" /></div>
+    <h3 ng-hide="!muted" class="panavision"><small>In</small> Color <small>and</small> Panavision</h3>
+</div>
+<div class="container-fluid">
+
+    <div class="wow row photo slideInRight" data-wow-offset="200">
+        <img src="/public/images/screen1.jpg">
+    </div>
+
+    <div id="map" ng-click="showMap()" class="wow row photo slideInLeft">
+        <img src="/public/images/screen2.jpg">
+    </div>
+
+    <a href="/public/ical/wedding.ics" class="wow row photo slideInRight">
+        <img src="/public/images/screen3.jpg">
+    </a>
+
+    <div class="wow row photo slideInRight">
+        <img src="/public/images/screen4.jpg">
+    </div>
+
+    <div class="wow row photo slideInUp">
+        <img src="/public/images/screen5.jpg">
+    </div>
+
+    <div class="wow row photo slideInRight">
+        <img src="/public/images/screen6.jpg">
+        <div class="icons">
+
+            <div class="row">
+
+                <div class="col-xs-4">
+                    <a href="" data-toggle="modal" data-target="#schedule-modal">
+                        <img src="/public/images/icons/cal.png" />
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="/public/docs/roadtrip.png">
+                        <img src="/public/images/icons/car.png" />
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a  href="" data-toggle="modal" data-target="#plane-modal">
+                        <img src="/public/images/icons/plane.png" />
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="" data-toggle="modal" data-target="#hotel-modal" >
+                        <img src="/public/images/icons/hotel.png" />
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="/activities">
+                        <img src="/public/images/icons/activities.png" />
+                    </a>
+                </div>
+
+                <div class="col-xs-4">
+                    <a href="" data-toggle="modal" data-target="#music-modal" ng-click="resetMusicModal()">
+                        <img src="/public/images/icons/music.png" />
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="music-modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Suggest a song</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="bs-callout bs-callout-warning">
+                    <p>All songs will be considered, but we make no promises!</p>
+                </div>
+
+                <form ng-submit="submitSongSuggestion()">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" name="full-name" ng-model="songSuggestion.name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Suggestions</label>
+                        <textarea class="form-control" name="suggestions" ng-model="songSuggestion.suggestions"></textarea>
+                    </div>
+
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="submitSongSuggestion()">Send</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="schedule-modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Schedule</h4>
+            </div>
+            <div class="modal-body">
+
+                <p>Pull this website up on your mobile phone the day of the wedding to see the latest schedule.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="hotel-modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Hotel details coming soon</h4>
+            </div>
+            <div class="modal-body">
+
+                <p>Ceremony, reception, and accommodations are all taking place at the Inn at Sunset Cliffs. Rooms are limited and require a special reservation code to allow for booking that weekend. If you try to book online, it will show the hotel as already fully booked. We will update this section after invitations are sent out.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="plane-modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">By Plane</h4>
+            </div>
+            <div class="modal-body">
+
+                <p>The closest airport to our destination is San Diego International (SAN). A cab from the airport to the Inn at Sunset Cliffs should only take 10-15 minutes, depending on traffic. The airport is pretty small, so navigating it should not be too difficult, and it usually does not require excessive time for check-in. There are two terminals, but they are far enough away from each other that you could never end up in the wrong one.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
