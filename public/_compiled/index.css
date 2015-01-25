@@ -175,7 +175,9 @@ body.infographic {
 @media (max-width: 768px) {
   .hero {
     height: 300px;
-    background-color: #000;
+    background-image: url('../images/hero-back.jpg');
+    background-position: center center;
+    background-size: cover;
   }
   .hero h3,
   .hero .panavision,
