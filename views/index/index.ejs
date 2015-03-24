@@ -2,16 +2,22 @@
     <div ng-hide="!muted" class="cover"></div>
     <video id="hero-video" autoplay muted loop>
 
-        <source src="/public/videos/hero.m4v" type="video/mp4" />
-        <source src="/public/videos/hero.webm" type="video/webm" />
-        <source src="/public/videos/hero.ogv" type="video/ogg" />
-        <source src="/public/videos/hero.mp4" />
+        <source src="/public/videos/hero.m4v" type="video/mp4"/>
+        <source src="/public/videos/hero.webm" type="video/webm"/>
+        <source src="/public/videos/hero.ogv" type="video/ogg"/>
+        <source src="/public/videos/hero.mp4"/>
 
     </video>
-    <div ng-hide="!muted" id="crest" class="crest wow bounceIn" ></div>
-    <a ng-hide="!muted"  href="" ng-class="{ muted : muted }" class="play" ng-click="toggleAudio()"></a>
-    <div class="scroll-down"><img src="/public/images/scroll-down.svg" /></div>
-    <h3 ng-hide="!muted" class="panavision"><small>In</small> Color <small>and</small> Panavision</h3>
+    <div ng-hide="!muted" id="crest" class="crest wow bounceIn"></div>
+    <a ng-hide="!muted" href="" ng-class="{ muted : muted }" class="play" ng-click="toggleAudio()"></a>
+
+    <div class="scroll-down"><img src="/public/images/scroll-down.svg"/></div>
+    <h3 ng-hide="!muted" class="panavision">
+        <small>In</small>
+        Color
+        <small>and</small>
+        Panavision
+    </h3>
 </div>
 <div class="container-fluid">
 
@@ -37,43 +43,44 @@
 
     <div class="wow row photo slideInRight">
         <img src="/public/images/screen6.jpg">
+
         <div class="icons">
 
             <div class="row">
 
                 <div class="col-xs-4">
                     <a href="" data-toggle="modal" data-target="#schedule-modal">
-                        <img src="/public/images/icons/cal.png" />
+                        <img src="/public/images/icons/cal.png"/>
                     </a>
                 </div>
 
                 <div class="col-xs-4">
                     <a href="" data-toggle="modal" data-target="#registry-modal">
-                        <img src="/public/images/icons/registry.png" />
+                        <img src="/public/images/icons/registry.png"/>
                     </a>
                 </div>
 
                 <div class="col-xs-4">
-                    <a  href="" data-toggle="modal" data-target="#plane-modal">
-                        <img src="/public/images/icons/plane.png" />
+                    <a href="" data-toggle="modal" data-target="#plane-modal">
+                        <img src="/public/images/icons/plane.png"/>
                     </a>
                 </div>
 
                 <div class="col-xs-4">
-                    <a href="" data-toggle="modal" data-target="#hotel-modal" >
-                        <img src="/public/images/icons/hotel.png" />
+                    <a href="" data-toggle="modal" data-target="#hotel-modal">
+                        <img src="/public/images/icons/hotel.png"/>
                     </a>
                 </div>
 
                 <div class="col-xs-4">
                     <a href="/activities">
-                        <img src="/public/images/icons/activities.png" />
+                        <img src="/public/images/icons/activities.png"/>
                     </a>
                 </div>
 
                 <div class="col-xs-4">
                     <a href="" data-toggle="modal" data-target="#music-modal" ng-click="resetMusicModal()">
-                        <img src="/public/images/icons/music.png" />
+                        <img src="/public/images/icons/music.png"/>
                     </a>
                 </div>
 
@@ -87,7 +94,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Suggest a song</h4>
             </div>
             <div class="modal-body">
@@ -100,12 +108,13 @@
 
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input type="text" class="form-control" name="full-name" ng-model="songSuggestion.name" />
+                        <input type="text" class="form-control" name="full-name" ng-model="songSuggestion.name"/>
                     </div>
 
                     <div class="form-group">
                         <label>Suggestions</label>
-                        <textarea class="form-control" name="suggestions" ng-model="songSuggestion.suggestions"></textarea>
+                        <textarea class="form-control" name="suggestions"
+                                  ng-model="songSuggestion.suggestions"></textarea>
                     </div>
 
                 </form>
@@ -116,36 +125,43 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" ng-click="submitSongSuggestion()">Send</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <div class="modal fade" id="car-modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">ROADTRIP</h4>
             </div>
             <div class="modal-body">
 
                 <div class="bs-callout bs-callout-warning">
-                    <p>The bride and groom are planning to road trip out. If you are interested in caravanning with us, let us know. We'll have additional details as the date approaches.</p>
+                    <p>The bride and groom are planning to road trip out. If you are interested in caravanning with us,
+                        let us know. We'll have additional details as the date approaches.</p>
                 </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <div class="modal fade" id="schedule-modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Schedule</h4>
             </div>
             <div class="modal-body">
@@ -156,27 +172,49 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <div class="modal fade" id="hotel-modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Hotel details coming soon</h4>
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Hotel Details</h4>
             </div>
             <div class="modal-body">
 
-                <p>Ceremony, reception, and accommodations are all taking place at the Inn at Sunset Cliffs. Rooms are limited and require a special reservation code to allow for booking that weekend. If you try to book online, it will show the hotel as already fully booked. We will update this section after invitations are sent out.</p>
+                <h3>Option 1</h3>
+                <p>To book your room at the Inn at Sunset Cliffs, contact the hotel and use the secret code word:</p>
+
+                <p><strong>Phone</strong>: 619-222-7901<br/>
+                    <strong>Code word</strong>: Romiller</p>
+
+                <p>You cannot book online because the entire hotel is reserved for the wedding.</p>
+                <hr/>
+                <h3>Option 2</h3>
+                <p>If the hotel is completely booked, the next nearest hotel is <em>Ocean Beach Hotel.</em>
+                </p>
+
+                <p><strong>Phone</strong>: 619-223-7191</p>
+
+                <address>
+                    5080 Newport Avenue <br />San Diego, CA 92107
+
+                </address>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 
@@ -184,39 +222,52 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">By Plane</h4>
             </div>
             <div class="modal-body">
 
-                <p>The closest airport to our destination is San Diego International (SAN). A cab from the airport to the Inn at Sunset Cliffs should only take 10-15 minutes, depending on traffic. The airport is pretty small, so navigating it should not be too difficult, and it usually does not require excessive time for check-in. There are two terminals, but they are far enough away from each other that you could never end up in the wrong one.</p>
+                <p>The closest airport to our destination is San Diego International (SAN). A cab from the airport to
+                    the Inn at Sunset Cliffs should only take 10-15 minutes, depending on traffic. The airport is pretty
+                    small, so navigating it should not be too difficult, and it usually does not require excessive time
+                    for check-in. There are two terminals, but they are far enough away from each other that you could
+                    never end up in the wrong one.</p>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <div class="modal fade" id="registry-modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close btn-default" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Gift Registries</h4>
             </div>
             <div class="modal-body">
-                <p>Your well wishes are gift enough, but if you insist on getting us something extra, use the list below to guide you.</p>
+                <p>Your well wishes are gift enough, but if you insist on getting us something extra, use the list below
+                    to guide you.</p>
                 <ul>
-                    <li><a href="http://www.macys.com/registry/wedding/guest/?registryId=6333241" target="_blank">Macy's</a></li>
-                    <li><a href="http://www.crateandbarrel.com/Gift-Registry/rebecca-miller-and-taylor-romero/r5296518" target="_blank">Crate &amp; Barrel</a></li>
+                    <li><a href="http://www.macys.com/registry/wedding/guest/?registryId=6333241"
+                           target="_blank">Macy's</a></li>
+                    <li><a href="http://www.crateandbarrel.com/Gift-Registry/rebecca-miller-and-taylor-romero/r5296518"
+                           target="_blank">Crate &amp; Barrel</a></li>
                 </ul>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
